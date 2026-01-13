@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/TestePort/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
