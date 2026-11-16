@@ -1,7 +1,6 @@
 <template>
   <section id="experience">
     <div class="wrap">
-      <p class="eyebrow">02 · Experience</p>
       <h2>Where I've worked</h2>
 
       <ol class="timeline">

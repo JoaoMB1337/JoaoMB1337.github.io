@@ -1,7 +1,6 @@
 <template>
   <section id="awards">
     <div class="wrap">
-      <p class="eyebrow">04 · Competitions</p>
       <h2>Programming competitions</h2>
 
       <div class="award-grid">

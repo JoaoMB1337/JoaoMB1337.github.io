@@ -1,14 +1,13 @@
 <template>
   <section id="about">
     <div class="wrap">
-      <p class="eyebrow">01 · About</p>
       <h2>About me</h2>
 
       <div class="about-grid" v-reveal>
         <div class="about-text">
           <p>
             I'm João, a developer from Portugal who likes software that quietly does its job. My path started
-            hands-on — repairing hardware and supporting users — before moving into web, desktop and mobile development.
+            hands-on, repairing hardware and supporting users, before moving into web, desktop and mobile development.
           </p>
           <p>
             Today I work at <strong>Nelo - M.A.R Kayaks</strong>, where I build and maintain the internal applications

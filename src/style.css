@@ -11,17 +11,17 @@
   --on-accent: #1a0d03;
   --grid: rgba(255, 255, 255, 0.04);
   --shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
-  --font: 'Space Grotesk', system-ui, sans-serif;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
   --radius: 14px;
   color-scheme: dark;
 }
 
 :root[data-theme='light'] {
-  --bg: #fafaf7;
-  --bg-2: #f2f2ed;
+  --bg: #ffffff;
+  --bg-2: #f4f4f5;
   --card: #ffffff;
-  --border: #e2e2db;
+  --border: #e4e4e7;
   --text: #15171c;
   --muted: #555c69;
   --accent: #c2530e;
@@ -34,10 +34,10 @@
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme='dark']) {
-    --bg: #fafaf7;
-    --bg-2: #f2f2ed;
+    --bg: #ffffff;
+    --bg-2: #f4f4f5;
     --card: #ffffff;
-    --border: #e2e2db;
+    --border: #e4e4e7;
     --text: #15171c;
     --muted: #555c69;
     --accent: #c2530e;
@@ -63,7 +63,7 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 { margin: 0; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; }
+h1, h2, h3, h4 { margin: 0; line-height: 1.15; font-family: var(--mono); font-weight: 600; letter-spacing: -0.02em; }
 p { margin: 0 0 1rem; color: var(--muted); }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; margin: 0; padding: 0; }
@@ -86,10 +86,6 @@ section { padding: 112px 0; }
 section + section { border-top: 1px solid var(--border); }
 section h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 48px; }
 
-.eyebrow {
-  font-family: var(--mono); font-size: 0.85rem; color: var(--accent);
-  margin-bottom: 12px; letter-spacing: 0.02em;
-}
 
 .card {
   background: var(--card);
@@ -165,7 +161,7 @@ section h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 48px; }
     linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 48px 48px;
 }
 .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; width: 100%; }
-.hero-name { font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 700; letter-spacing: -0.04em; }
+.hero-name { font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 700; letter-spacing: -0.02em; }
 .hero-role { font-size: clamp(1.25rem, 2.4vw, 1.6rem); color: var(--text); margin: 14px 0 18px; font-weight: 500; }
 .hero-lead { max-width: 52ch; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
@@ -205,7 +201,7 @@ section h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 48px; }
 .sub { font-size: 1.25rem; margin: 72px 0 20px; }
 .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 .stack-card { padding: 22px; }
-.stack-card h4 { font: 600 0.8rem/1 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
+.stack-card h4 { font: 600 0.8rem/1 var(--mono); color: var(--text); margin-bottom: 16px; }
 
 /* ---------- Experience ---------- */
 .timeline { border-left: 1px solid var(--border); margin-left: 6px; }
@@ -226,14 +222,17 @@ section h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 48px; }
 .job-desc li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
 
 /* ---------- Projects ---------- */
-.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; }
+/* Lead project (first in data) gets the full row */
+.project:first-child { grid-column: 1 / -1; padding: 36px; }
+.project:first-child h3 { font-size: 1.6rem; }
+.project:first-child p { font-size: 1.05rem; max-width: 60ch; }
 .project {
   display: flex; flex-direction: column; padding: 26px;
   transition: transform .25s, border-color .25s, box-shadow .25s;
 }
 .project:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: var(--shadow); }
-.project-top { display: flex; justify-content: space-between; font-size: 1.4rem; color: var(--muted); margin-bottom: 20px; }
-.project-arrow { transition: transform .25s, color .25s; }
+.project-arrow { color: var(--muted); vertical-align: -0.1em; transition: transform .25s, color .25s; }
 .project:hover .project-arrow { color: var(--accent); transform: translate(3px, -3px); }
 .project h3 { font-size: 1.2rem; margin-bottom: 10px; }
 .project p { font-size: 0.97rem; flex: 1; }

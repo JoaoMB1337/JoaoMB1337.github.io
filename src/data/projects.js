@@ -1,7 +1,7 @@
 export const projectsData = [
   {
     title: 'Stocker POS',
-    description: 'Point of Sale system built as my final-year project — a complete sales and stock management solution.',
+    description: 'Point of Sale system built as my final-year project. A complete sales and stock management solution.',
     tech: ['C#', 'MySQL', 'Desktop'],
     link: 'https://github.com/JoaoMB1337/PAP-Final-De-Curso'
   },

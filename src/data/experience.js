@@ -1,6 +1,6 @@
 export const experienceData = [
   {
-    date: 'Oct 2021 — Present',
+    date: 'Oct 2021–Present',
     title: 'IT Analyst / Developer',
     company: 'Nelo - M.A.R Kayaks',
     description: [
@@ -12,7 +12,7 @@ export const experienceData = [
     stack: ['Laravel', 'MySQL', 'SQL Server', 'Python', 'Android']
   },
   {
-    date: 'Dec 2019 — Feb 2020',
+    date: 'Dec 2019–Feb 2020',
     title: 'Intern Developer',
     company: 'Core Soluções',
     description: [
@@ -22,7 +22,7 @@ export const experienceData = [
     stack: ['C#', 'SQL', 'PHP', 'Xamarin']
   },
   {
-    date: 'May 2018 — Jul 2018 · Apr 2019 — May 2019',
+    date: 'May 2018–Jul 2018 · Apr 2019–May 2019',
     title: 'Hardware Maintenance Intern',
     company: 'Pgs Sistemas Informáticos',
     description: [

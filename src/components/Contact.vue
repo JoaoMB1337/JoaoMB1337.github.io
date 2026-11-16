@@ -2,7 +2,6 @@
   <section id="contact">
     <div class="wrap contact-grid">
       <div>
-        <p class="eyebrow">05 · Contact</p>
         <h2>Let's talk</h2>
         <p>
           Have a question, an opportunity or just want to say hi? Send me a message and I'll get back to you.

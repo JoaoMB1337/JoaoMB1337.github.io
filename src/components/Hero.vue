@@ -2,12 +2,11 @@
   <section id="top" class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Hi, I'm</p>
         <h1 class="hero-name">João Barbosa<span class="accent">.</span></h1>
         <p class="hero-role">Backend developer who keeps real operations running.</p>
         <p class="hero-lead">
           IT Analyst &amp; Developer at <strong>Nelo</strong>, building the internal systems a world-class kayak
-          manufacturer runs on every day — and crunching sensor data from elite athletes.
+          manufacturer runs on every day. I also crunch sensor data from elite athletes.
         </p>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">See my work</a>
