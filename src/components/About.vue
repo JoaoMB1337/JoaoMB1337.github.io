@@ -1,31 +1,42 @@
 <template>
-  <section id="about" class="container">
-    <h2 class="section-title"><span class="text-accent">01.</span> About Me</h2>
-    <div class="about-content">
-      <div class="about-text">
-        <p>
-          Hello! My name is João and I enjoy creating software that lives on the internet.
-          My journey started with diverse experiences, from hardware repair to developing mobile
-          applications.
-        </p>
-        <p>
-          Currently, I'm working at <span class="text-accent">Nelo - M.A.R Kayaks</span>, where I
-          develop internal tools ensuring daily operations run smoothly, and analyze data to help
-          elite athletes optimize their performance.
-        </p>
-        <p>
-          Here are a few technologies I've been working with recently:
-        </p>
+  <section id="about">
+    <div class="wrap">
+      <p class="eyebrow">01 · About</p>
+      <h2>About me</h2>
+
+      <div class="about-grid" v-reveal>
+        <div class="about-text">
+          <p>
+            I'm João, a developer from Portugal who likes software that quietly does its job. My path started
+            hands-on — repairing hardware and supporting users — before moving into web, desktop and mobile development.
+          </p>
+          <p>
+            Today I work at <strong>Nelo - M.A.R Kayaks</strong>, where I build and maintain the internal applications
+            behind daily operations, and analyse sensor data to help elite athletes get faster.
+          </p>
+          <p>
+            Because I've also been the person fixing the machines, I care about systems that are reliable,
+            easy to maintain and pleasant for the people who use them every day.
+          </p>
+        </div>
+        <figure class="portrait">
+          <img src="https://github.com/JoaoMB1337.png?size=460" alt="Portrait of João Barbosa" width="300" height="300" loading="lazy">
+        </figure>
       </div>
-      <div class="profile-img-container">
-        <img src="https://github.com/JoaoMB1337.png" alt="João Barbosa" class="profile-img">
+
+      <h3 class="sub">Tech I work with</h3>
+      <div class="stack-grid">
+        <div v-for="s in stack" :key="s.group" class="card stack-card" v-reveal>
+          <h4>{{ s.group }}</h4>
+          <ul class="chips">
+            <li v-for="item in s.items" :key="item">{{ item }}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { stack } from '@/data/stack'
 </script>
-
-<style scoped>
-</style>
