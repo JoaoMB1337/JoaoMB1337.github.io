@@ -10,7 +10,7 @@
     <Contact />
   </main>
   <footer class="site-footer">
-    <div class="wrap">© {{ new Date().getFullYear() }} João Barbosa · Built with Vue</div>
+    <div class="wrap">© {{ new Date().getFullYear() }} João Barbosa</div>
   </footer>
 </template>
 
